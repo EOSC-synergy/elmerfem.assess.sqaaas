@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.9
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/ElmerCSC/elmerfem:
+      branch: EOSC
+      repo: https://github.com/ElmerCSC/elmerfem
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ElmerCSC/elmerfem git:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-myrtle-retriever.sh
+        container: qc.acc_messy-razzmatazz-duck
+  QC.Doc:
+    repos:
+      github.com/ElmerCSC/elmerfem find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-cornflower-chicken.sh
+        container: qc.doc_sickly-lemon-gorilla
+      github.com/ElmerCSC/elmerfem git:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-silver-chipmunk.sh
+        container: qc.doc_snappy-razzmatazz-flamingo
+      github.com/ElmerCSC/elmerfem markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-cerise-bat.sh
+        container: qc.doc_seedy-russet-cow
+  QC.Lic:
+    repos:
+      github.com/ElmerCSC/elmerfem licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-peach-terrier.sh
+        container: qc.lic_crappy-smalt-labradoodle
+  QC.Sec:
+    repos:
+      github.com/ElmerCSC/elmerfem bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-wheat-newt.sh
+        container: qc.sec_cheeky-olive-woodlouse
+  QC.Sty:
+    repos:
+      github.com/ElmerCSC/elmerfem flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-buff-rhinoceros.sh
+        container: qc.sty_jumpy-flax-chameleon
+      github.com/ElmerCSC/elmerfem hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-russet-mayfly.sh
+        container: qc.sty_leaky-champagne-sponge
+      github.com/ElmerCSC/elmerfem jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-brown-schnauzer.sh
+        container: qc.sty_pasty-harlequin-giraffe
+  QC.Ver:
+    repos:
+      github.com/ElmerCSC/elmerfem get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-copper-lion.sh
+        container: qc.ver_chewy-bronze-bat
+timeout: 5400
