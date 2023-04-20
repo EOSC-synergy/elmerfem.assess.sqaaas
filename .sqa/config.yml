@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/ElmerCSC/elmerfem git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-harlequin-beagle.sh
-        container: qc.acc_pretty-taupe-woodpecker
+        - /usr/bin/env sh .sqa/script.foggy-firebrick-bison.sh
+        container: qc.acc_squirrely-platinum-whippet
   QC.Doc:
     repos:
       github.com/ElmerCSC/elmerfem find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-ochre-whippet.sh
-        container: qc.doc_slaphappy-peach-angelfish
+        - /usr/bin/env sh .sqa/script.stuffy-persimmon-emu.sh
+        container: qc.doc_lanky-magenta-wildebeest
       github.com/ElmerCSC/elmerfem git:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-purple-owl.sh
-        container: qc.doc_tasty-smalt-mist
+        - /usr/bin/env sh .sqa/script.stinky-periwinkle-akbash.sh
+        container: qc.doc_slaphappy-cerulean-deer
       github.com/ElmerCSC/elmerfem markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-razzmatazz-indri.sh
-        container: qc.doc_crabby-cobalt-chimpanzee
+        - /usr/bin/env sh .sqa/script.wheezy-gold-swan.sh
+        container: qc.doc_jumpy-teal-zebra
   QC.Lic:
     repos:
       github.com/ElmerCSC/elmerfem licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-maroon-jellyfish.sh
-        container: qc.lic_gloppy-ultramarine-terrier
+        - /usr/bin/env sh .sqa/script.lumpy-sangria-devil.sh
+        container: qc.lic_lanky-coral-tetra
   QC.Met:
     repos:
       github.com/ElmerCSC/elmerfem cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-lime-markhor.sh
-        container: qc.met_gummy-emerald-dingo
+        - /usr/bin/env sh .sqa/script.queasy-amber-mongoose.sh
+        container: qc.met_sleazy-brass-octopus
   QC.Sec:
     repos:
       github.com/ElmerCSC/elmerfem bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-azure-sloth.sh
-        container: qc.sec_squeaky-maroon-cockroach
+        - /usr/bin/env sh .sqa/script.scummy-platinum-warthog.sh
+        container: qc.sec_sunny-celadon-opossum
   QC.Sty:
     repos:
       github.com/ElmerCSC/elmerfem flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-tomato-lemur.sh
-        container: qc.sty_foggy-chartreuse-civet
+        - /usr/bin/env sh .sqa/script.skinny-violet-audemer.sh
+        container: qc.sty_gummy-asparagus-worm
       github.com/ElmerCSC/elmerfem hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-amethyst-okapi.sh
-        container: qc.sty_crappy-blue-eagle
+        - /usr/bin/env sh .sqa/script.breezy-amber-rat.sh
+        container: qc.sty_goopy-violet-moorhen
       github.com/ElmerCSC/elmerfem jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-saffron-ant.sh
-        container: qc.sty_chewy-tangerine-hound
+        - /usr/bin/env sh .sqa/script.bumpy-cyan-devil.sh
+        container: qc.sty_paltry-platinum-hamster
   QC.Ver:
     repos:
       github.com/ElmerCSC/elmerfem get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-linen-capuchin.sh
-        container: qc.ver_baggy-orchid-gharial
+        - /usr/bin/env sh .sqa/script.sleepy-ochre-fly.sh
+        container: qc.ver_skinny-silver-cuscus
 timeout: 5400
